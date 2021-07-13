@@ -1,0 +1,552 @@
+============[Date]============
+[ 2021-06-19 16:59:47  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829481
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111187
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 16:59:48  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829482
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111188
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:23  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829492
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111222
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:24  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829493
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111223
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:31  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829496
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111231
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:33  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829497
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111232
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:55  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829501
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111255
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:00:56  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829502
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111256
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:01:04  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829506
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111264
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 17:01:06  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829507
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624111265
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 18:28:38  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829518
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624116518
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-19 18:28:39  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829519
+ref.my_chat_member.chat.id= 544214130
+ref.my_chat_member.chat.first_name= Алексей Lifecell
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 544214130
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Lifecell
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624116519
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+

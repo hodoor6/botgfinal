@@ -1,0 +1,134 @@
+============[Date]============
+[ 2021-05-10 17:54:33  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat not found
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856828528
+ref.message.message_id= 1235
+ref.message.from.id= 400657466
+ref.message.from.is_bot= false
+ref.message.from.first_name= Алексей Kyivstar
+ref.message.from.username= phpprogramist
+ref.message.from.language_code= ru
+ref.message.chat.id= 400657466
+ref.message.chat.first_name= Алексей Kyivstar
+ref.message.chat.username= phpprogramist
+ref.message.chat.type= private
+ref.message.date= 1620658473
+ref.message.text= 👧 Найти девушку
+
+
+[ref]
+ref.user_id= 400657466
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(1364): Telegram->endpoint('getChatMember', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/SearchGirl.php(4): Telegram->getChatMember(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(172): require_once('/home/mstudia/n...')
+#5 {main}
+
+============[Date]============
+[ 2021-05-10 23:07:53  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat not found
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856828535
+ref.message.message_id= 1251
+ref.message.from.id= 1483941496
+ref.message.from.is_bot= false
+ref.message.from.first_name= ~Катя~
+ref.message.from.language_code= ru
+ref.message.chat.id= 1483941496
+ref.message.chat.first_name= ~Катя~
+ref.message.chat.type= private
+ref.message.date= 1620677273
+ref.message.text= 👦 Найти парня
+
+
+[ref]
+ref.user_id= 1483941496
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(1364): Telegram->endpoint('getChatMember', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/SearchBoy.php(5): Telegram->getChatMember(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(171): require_once('/home/mstudia/n...')
+#5 {main}
+
+============[Date]============
+[ 2021-05-10 23:10:15  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat not found
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856828540
+ref.message.message_id= 1260
+ref.message.from.id= 1483941496
+ref.message.from.is_bot= false
+ref.message.from.first_name= ~Катя~
+ref.message.from.language_code= ru
+ref.message.chat.id= 1483941496
+ref.message.chat.first_name= ~Катя~
+ref.message.chat.type= private
+ref.message.date= 1620677408
+ref.message.text= 👦 Найти парня
+
+
+[ref]
+ref.user_id= 1483941496
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(1364): Telegram->endpoint('getChatMember', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/SearchBoy.php(5): Telegram->getChatMember(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(171): require_once('/home/mstudia/n...')
+#5 {main}
+
+============[Date]============
+[ 2021-05-10 23:37:45  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat not found
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856828544
+ref.message.message_id= 1268
+ref.message.from.id= 1483941496
+ref.message.from.is_bot= false
+ref.message.from.first_name= ~Катя~
+ref.message.from.language_code= ru
+ref.message.chat.id= 1483941496
+ref.message.chat.first_name= ~Катя~
+ref.message.chat.type= private
+ref.message.date= 1620679064
+ref.message.text= 👧 Найти девушку
+
+
+[ref]
+ref.user_id= 1483941496
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(1364): Telegram->endpoint('getChatMember', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/SearchGirl.php(4): Telegram->getChatMember(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(172): require_once('/home/mstudia/n...')
+#5 {main}
+

@@ -1,0 +1,109 @@
+============[Date]============
+[ 2021-05-27 13:11:41  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: wrong file identifier/HTTP URL specified
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829088
+ref.message.message_id= 2433
+ref.message.from.id= 310642607
+ref.message.from.is_bot= false
+ref.message.from.first_name= Алексей Vodafone
+ref.message.from.username= programist_php
+ref.message.from.language_code= ru
+ref.message.chat.id= 310642607
+ref.message.chat.first_name= Алексей Vodafone
+ref.message.chat.username= programist_php
+ref.message.chat.type= private
+ref.message.date= 1622110301
+ref.message.text= 💓 ЗНАКОМСТВА
+
+
+[ref]
+ref.photo= AgACAgQAAxkDAAIKfWCvbM8fLM9dfXVi4OE_407Eep4RAAJ6rDEbQAV8URjzZXxWoQchiIDPKl0AAwEAAwIAA3gAA3zDBQABHwQ
+ref.parse_mode= HTML
+ref.reply_markup= {"keyboard":[[{"text":"\u0410\u041d\u041a\u0415\u0422\u0410","request_contact":false,"request_location":false},{"text":"\u0424\u0418\u041b\u042c\u0422\u0420","request_contact":false,"request_location":false}],[{"text":"\u041f\u0420\u0418\u041a\u041e\u041b\u042b","request_contact":false,"request_location":false},{"text":"\u0412\u0421\u0422\u0420\u0415\u0427\u0418","request_contact":false,"request_location":false}],[{"text":"\u041e\u0421\u041d\u041e\u0412\u041d\u041e\u0419 \u0411\u041e\u0422","request_contact":false,"request_location":false},{"text":"\u0424\u041e\u0420\u0423\u041c","request_contact":false,"request_location":false}],[{"text":"\u041d\u0410\u0417\u0410\u0414","request_contact":false,"request_location":false},{"text":"\u041f\u041e\u0414\u0410\u0420\u041e\u041a","request_contact":false,"request_location":false},{"text":"\u0427\u0410\u0422","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(296): Telegram->endpoint('sendPhoto', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Dating.php(10): Telegram->sendPhoto(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(195): require_once('/home/mstudia/n...')
+#5 {main}
+
+============[Date]============
+[ 2021-05-27 13:12:27  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: wrong file identifier/HTTP URL specified
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829089
+ref.message.message_id= 2435
+ref.message.from.id= 310642607
+ref.message.from.is_bot= false
+ref.message.from.first_name= Алексей Vodafone
+ref.message.from.username= programist_php
+ref.message.from.language_code= ru
+ref.message.chat.id= 310642607
+ref.message.chat.first_name= Алексей Vodafone
+ref.message.chat.username= programist_php
+ref.message.chat.type= private
+ref.message.date= 1622110347
+ref.message.text= 💓 ЗНАКОМСТВА
+
+
+[ref]
+ref.photo= AgACAgQAAxkDAAIKfWCvbM8fLM9dfXVi4OE_407Eep4RAAJ6rDEbQAV8URjzZXxWoQchiIDPKl0AAwEAAwIAA3gAA3zDBQABHwQ
+ref.parse_mode= HTML
+ref.reply_markup= {"keyboard":[[{"text":"\u0410\u041d\u041a\u0415\u0422\u0410","request_contact":false,"request_location":false},{"text":"\u0424\u0418\u041b\u042c\u0422\u0420","request_contact":false,"request_location":false}],[{"text":"\u041f\u0420\u0418\u041a\u041e\u041b\u042b","request_contact":false,"request_location":false},{"text":"\u0412\u0421\u0422\u0420\u0415\u0427\u0418","request_contact":false,"request_location":false}],[{"text":"\u041e\u0421\u041d\u041e\u0412\u041d\u041e\u0419 \u0411\u041e\u0422","request_contact":false,"request_location":false},{"text":"\u0424\u041e\u0420\u0423\u041c","request_contact":false,"request_location":false}],[{"text":"\u041d\u0410\u0417\u0410\u0414","request_contact":false,"request_location":false},{"text":"\u041f\u041e\u0414\u0410\u0420\u041e\u041a","request_contact":false,"request_location":false},{"text":"\u0427\u0410\u0422","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(296): Telegram->endpoint('sendPhoto', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Dating.php(10): Telegram->sendPhoto(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(195): require_once('/home/mstudia/n...')
+#5 {main}
+
+============[Date]============
+[ 2021-05-27 20:56:19  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat not found
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829108
+ref.message.message_id= 2471
+ref.message.from.id= 853662126
+ref.message.from.is_bot= false
+ref.message.from.first_name= Сашка)))))
+ref.message.from.username= Sazonenko_Aleks
+ref.message.from.language_code= ru
+ref.message.chat.id= 853662126
+ref.message.chat.first_name= Сашка)))))
+ref.message.chat.username= Sazonenko_Aleks
+ref.message.chat.type= private
+ref.message.date= 1622138179
+ref.message.text= 👧 Найти девушку
+
+
+[ref]
+ref.user_id= 853662126
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(1364): Telegram->endpoint('getChatMember', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/SearchGirl.php(4): Telegram->getChatMember(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#5 {main}
+

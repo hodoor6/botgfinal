@@ -1,0 +1,419 @@
+============[Date]============
+[ 2021-06-27 22:40:47  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829817
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.date= 1624822847
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>0</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 22:40:48  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829818
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624822848
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>0</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 22:41:05  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829821
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624822864
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>1</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 22:41:06  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829822
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624822865
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>1</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 22:41:59  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829824
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624822918
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>1</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 22:42:00  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829825
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624822919
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>📊 Статистика проекта</b>
+
+👤 Пользователей: <b>16</b>
+🧿 Пользователей online: <b>1</b>
+👥 Новых пользователей: <b>0</b>
+
+📆 Бот работает: <b>52</b> дня(ей)
+ref.reply_markup= {"keyboard":[[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}],[{"text":"","request_contact":false,"request_location":false}]],"one_time_keyboard":false,"resize_keyboard":true,"selective":true}
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Statistic.php(20): Messages->replyHTML('<b>\xF0\x9F\x93\x8A \xD0\xA1\xD1\x82\xD0\xB0\xD1...', '{"keyboard":[[{...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(174): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 23:11:43  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829831
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624824703
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= member
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= kicked
+ref.my_chat_member.new_chat_member.until_date= 0
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(193): require_once('/home/mstudia/n...')
+#6 {main}
+
+============[Date]============
+[ 2021-06-27 23:11:45  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829832
+ref.my_chat_member.chat.id= 310642607
+ref.my_chat_member.chat.first_name= Алексей Vodafone
+ref.my_chat_member.chat.username= programist_php
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 310642607
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= Алексей Vodafone
+ref.my_chat_member.from.username= programist_php
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1624824704
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= 
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3211): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(201): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML(false)
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(193): require_once('/home/mstudia/n...')
+#6 {main}
+

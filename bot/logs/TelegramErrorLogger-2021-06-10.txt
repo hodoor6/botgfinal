@@ -1,0 +1,55 @@
+============[Date]============
+[ 2021-06-10 07:43:02  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 856829191
+ref.my_chat_member.chat.id= 1090802427
+ref.my_chat_member.chat.first_name= ~MAKS~
+ref.my_chat_member.chat.username= maksim020325
+ref.my_chat_member.chat.type= private
+ref.my_chat_member.from.id= 1090802427
+ref.my_chat_member.from.is_bot= false
+ref.my_chat_member.from.first_name= ~MAKS~
+ref.my_chat_member.from.username= maksim020325
+ref.my_chat_member.from.language_code= ru
+ref.my_chat_member.date= 1623300181
+ref.my_chat_member.old_chat_member.user.id= 1727523368
+ref.my_chat_member.old_chat_member.user.is_bot= true
+ref.my_chat_member.old_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.old_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.old_chat_member.status= kicked
+ref.my_chat_member.old_chat_member.until_date= 0
+ref.my_chat_member.new_chat_member.user.id= 1727523368
+ref.my_chat_member.new_chat_member.user.is_bot= true
+ref.my_chat_member.new_chat_member.user.first_name= Znakomstvo
+ref.my_chat_member.new_chat_member.user.username= LoveOdessa_bot
+ref.my_chat_member.new_chat_member.status= member
+
+
+[ref]
+ref.chat_id= 
+ref.text= <b>⚡️ Правила проекта</b>
+
+❗️ Запрещено оскорблять собеседников
+❗️ Запрещено использовать порнографические материалы для фото профиля
+❗️ Запрещен любой вид рекламы
+❗️ Администрация проекта в любой момент может вас заблокировать без обоснования причины
+
+<i>*Используя бота вы соглашаетесь со всеми правилами!</i>
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML('<b>\xE2\x9A\xA1\xEF\xB8\x8F \xD0\x9F\xD1\x80\xD0...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+

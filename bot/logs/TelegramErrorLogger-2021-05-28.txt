@@ -1,0 +1,30 @@
+============[Date]============
+[ 2021-05-28 14:55:35  Europe/Kiev ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= <b>⚡️ Правила проекта</b>
+
+❗️ Запрещено оскорблять собеседников
+❗️ Запрещено использовать порнографические материалы для фото профиля
+❗️ Запрещен любой вид рекламы
+❗️ Администрация проекта в любой момент может вас заблокировать без обоснования причины
+
+<i>*Используя бота вы соглашаетесь со всеми правилами!</i>
+ref.reply_markup= 
+ref.parse_mode= HTML
+
+
+============[Trace]===========
+#0 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(3206): TelegramErrorLogger::log(Array, Array)
+#1 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(111): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 /home/mstudia/nashmed.com.ua/bot/bot/TelegramAPI/Telegram.php(196): Telegram->endpoint('sendMessage', Array)
+#3 /home/mstudia/nashmed.com.ua/bot/bot/App/Modules/Messages/Messages.php(57): Telegram->sendMessage(Array)
+#4 /home/mstudia/nashmed.com.ua/bot/bot/App/Components/message/Rules.php(4): Messages->replyHTML('<b>\xE2\x9A\xA1\xEF\xB8\x8F \xD0\x9F\xD1\x80\xD0...')
+#5 /home/mstudia/nashmed.com.ua/bot/bot/bot.php(181): require_once('/home/mstudia/n...')
+#6 {main}
+
