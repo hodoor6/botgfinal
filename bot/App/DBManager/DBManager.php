@@ -176,26 +176,6 @@ class DBManager
         $db->where('user_id', $user_id)->update('users', $content);
     }
 
-    public function setCity($user_id, $city)
-    {
-        $db = $this->db;
-        $content = array('city' => $city);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
-
-    public function setCountry($user_id, $country)
-    {
-        $db = $this->db;
-        $content = array('country' => $country);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
-
-    public function setPhotoProfile($user_id, $photo)
-    {
-        $db = $this->db;
-        $content = array('photo_profile' => $photo);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
 
     public function getCompanion($user_id)
     {
@@ -300,19 +280,7 @@ class DBManager
         return $res;
     }
 
-    public function getCmd($user_id)
-    {
-        $db = $this->db;
-        $result = $db->where('user_id', $user_id)->getOne('users');
-        return $result['cmd'];
-    }
 
-    public function setCmd($user_id, $cmd)
-    {
-        $db = $this->db;
-        $content = array('cmd' => $cmd);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
 
     public function getBan($user_id)
     {
@@ -424,5 +392,164 @@ ORDER BY distance LIMIT 1";
         $res = $db->rawQuery($query, [$lat, $lng, $lat]);
         return $res[0]['city'];
     }
+	
+	    public function getUserInfoDating($user_id)
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne('dating_users');
+        return $result;
+    }
+
+    public function addUserDating($user_id,$gender,$age,$username)
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'username' => $username, 'cmd' => '', 'age' => $age, 'gender' => $gender,
+            'last_update' => 0, 'country' => '', 'city' => '', 'photo_profile' => '', 'rating' => 0,'reg_status'=> 1);
+        $id = $db->insert('dating_users', $content);
+        return $id;
+    }
+	
+	    public function getCmd($user_id)
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne('users');
+        return $result['cmd'];
+    }
+
+    public function setCmd($user_id, $cmd,$table='users')
+    {
+        $db = $this->db;
+        $content = array('cmd' => $cmd);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setCity($user_id, $city,$table='users')
+    {
+        $db = $this->db;
+        $content = array('city' => $city);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setCountry($user_id, $country,$table='users')
+    {
+        $db = $this->db;
+        $content = array('country' => $country);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+// получение имени пользователя
+    public function getName($user_id,$table='dating_users')
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['name'];
+    }
+
+    public function setName($user_id, $name,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('name' => $name);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    //удаление пользователя
+    public function deleteUser($user_id,$table='dating_users')
+    {
+        $db = $this->db;
+        $db->where('user_id', $user_id)->delete($table,1);
+    }
+
+// статус регестрации для знакомст
+
+
+    public function getRegStatus($user_id,$table='dating_users')
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['reg_status'];
+    }
+
+
+    public function setRegStatus($user_id, $status,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('reg_status' => $status);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+    public function setGoalCommunication($user_id, $goal,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('goal_communication' => $goal);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setChildren($user_id, $children,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('children' => $children);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+    public function setPresent($user_id, $present,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('present' => $present);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+// в какой стране хотят найти собеседника
+    public function setFindCountry($user_id, $country,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('find_country' => $country);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setEmail($user_id, $email,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('email' => $email);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setContactAddress ($user_id, $contactaddress,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('contact_address' => $contactaddress);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setPhotoProfile($user_id, $photo,$table='users')
+    {
+        $db = $this->db;
+        $content = array('photo_profile' => $photo);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+    public function setPhotoProfileTwo($user_id, $photo,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('photo_profile_two' => $photo);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+    public function setPhotoProfileThree($user_id, $photo,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('photo_profile_three' => $photo);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+
+    public function setVideoProfile($user_id, $video,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('video_profile' => $video);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setMusicProfile($user_id, $music,$table='dating_users')
+    {
+        $db = $this->db;
+        $content = array('music_profile' => $music);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
 
 }

@@ -56,6 +56,10 @@ if ($message == '/start' || ($message != '' && $new_user == true) ) {
     } else if ($cmd[0] == 'set_age') {
         $msg->replyHTML($json['text']['шаг2']);
     } else {
+		  if($user_infodating['reg_status'] === 1)
+        {
+            $db->deleteUser($chatid);
+        }
         $db->setCmd($chatid, '');
         $db->setSearchBoy($chatid, 0);
         $db->setSearchGirl($chatid, 0);

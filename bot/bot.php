@@ -72,10 +72,21 @@ $photo_id = $photo_id['file_id'];
 //if ($photo_id != '') $msg->sendHTML('394296212', $photo_id);
 /*--- PHOTO ID ---*/
 
+/*--- AUDIO ID ---*/
+
+$music_id = $object['message']['audio'];
+
+$music_id = $music_id['file_id'];
+
 /*--- VIDEO ID ---*/
+$video_id = $object['video']['file_id'];
+
+$video_id = $video_id['file_id'];
+
 $video_id = $object['message']['video']['file_id'];
 /*--- VIDEO ID ---*/
-if ($video_id != '') $msg->sendHTML('394296212', $video_id);
+//if ($video_id != '') $msg->sendHTML('394296212', $video_id);
+//if ($video_id != '') $msg->sendHTML('394296212', $video_id);
 
 /*--- VIDEO NOTE ID ---*/
 $video_note_id = $object['message']['video_note']['file_id'];
@@ -114,6 +125,13 @@ if (empty($user_info) && stripos($chatid, '-') === false) {
     memcache_set($mem, 'user_info_' . $chatid, $user_info, MEMCACHE_COMPRESSED, 30);
 }
 
+//USER INFO dating
+$user_infodating = memcache_get($mem, 'user_info_dating_' . $chatid );
+if (empty($user_infodating) && stripos($chatid, '-') === false) {
+    $user_infodating = $db->getUserInfoDating($chatid);
+    memcache_set($mem, 'user_info_dating_' . $chatid, $user_infodating, MEMCACHE_COMPRESSED, 30);
+}
+
 //if ($chatid != ADMIN_ID) exit();
 
 
@@ -135,6 +153,13 @@ if ($user_info['user_id'] != $chatid && stripos($chatid, '-') === false ) {
     $db->addUser($chatid);
 }
 
+//анкета знакомства
+$new_user_dating = false;
+if ($user_infodating['user_id'] != $chatid && stripos($chatid, '-') === false &&  $message == $json['buttons']['знакомства'] ) {
+    $new_user_dating = true;
+    $db->addUserDating($chatid,$user_info['gender'],$user_info['age'],$user_info['username']);
+}
+
 if ($username == '') $username = 'NaN';
 if ($user_info['username'] != $username && $user_info['username'] != 'NaN') {
     $db->setUsername($chatid, $username);
@@ -142,6 +167,11 @@ if ($user_info['username'] != $username && $user_info['username'] != 'NaN') {
 
 $cmd = $user_info['cmd'];
 if (isset($cmd)) $cmd = explode('/', $cmd);
+
+//анкета знакомства
+$cmddating = $user_infodating['cmd'];
+if (isset($cmddating)) $cmddating = explode('/', $cmddating);
+
 $message_arr = '';
 if (isset($message)) $message_arr = explode(' ', $message);
 if (is_array($message_arr) && $message_arr[1] != '' && $message_arr[0] == '/start') {
@@ -164,7 +194,7 @@ if ($user_info['ban'] == 1)
 
 //includes Global Vars
 require (__DIR__ . '/GlobalVars.php');
-
+require_once (__DIR__ . '/App/Components/message/Dating.php');
 //подключаение компонентов
 //START SYS
 require_once (__DIR__ . '/App/Components/data/set_number.php');
@@ -206,5 +236,21 @@ require_once (__DIR__ . '/App/Components/message/Admin/mailing.php');
 require_once (__DIR__ . '/App/Components/message/Admin/MenuUser.php');
 require_once (__DIR__ . '/App/Components/data/Admin/menu_user.php');
 require_once (__DIR__ . '/App/Components/message/Admin/AllUser.php');
-require_once (__DIR__ . '/App/Components/message/Dating.php');
+
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetNameDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetCountyDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetCityDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetGoalCommunicationDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetChildrenDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetPresentDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetFindCountryDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetEmailDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetContactAddressDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetPhotoDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetPhotoTwoDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetPhotoThreeDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetVideoDating.php');
+require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetMusicDating.php');
+
+
 require_once (__DIR__ . '/App/Components/message/BackBtnMenu.php');

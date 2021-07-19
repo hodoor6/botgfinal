@@ -35,7 +35,7 @@ $btn_menu = $bt->keyButtons([
 ]);
 
 
-$btndating_menu = $bt->keyButtons([
+$dating_menu_btn = $bt->keyButtons([
      [
         $json['buttons']['анкета-dating'] => '',
         $json['buttons']['фильтр-dating'] => ''
@@ -85,5 +85,90 @@ $what_btn = $bt->inlineButtons([
 $keyb_cancel = $bt->keyButtons([
     [
         $json['buttons']['отмена'] => ''
+    ]
+]);
+
+$goal_communication_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['цель общение'] => 'set_goal_communication_dating/1'
+    ],
+    [
+        $json['inline-dating']['цель дружба'] => 'set_goal_communication_dating/2'
+    ],
+    [
+        $json['inline-dating']['цель семья'] => 'set_goal_communication_dating/3'
+    ],
+    [
+        $json['inline-dating']['цель всё'] => 'set_goal_communication_dating/4'
+    ],
+    [
+        $json['inline-dating']['цель нет в списке'] => 'set_goal_communication_dating/5'
+    ]
+]);
+
+$children_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['дети нет'] => 'set_children_dating/1'
+    ],
+    [
+        $json['inline-dating']['дети рано'] => 'set_children_dating/2'
+    ],
+    [
+        $json['inline-dating']['дети хочется'] => 'set_children_dating/3'
+    ],
+    [
+        $json['inline-dating']['дети есть и хочу ещё'] => 'set_children_dating/4'
+    ],
+    [
+        $json['inline-dating']['дети есть больше не хочу'] => 'set_children_dating/5'
+    ],
+    [
+        $json['inline-dating']['дети другое'] => 'set_children_dating/6'
+    ]
+]);
+
+$find_country_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['страна поиска украина'] => 'set_find_country/1'
+    ],
+    [
+        $json['inline-dating']['страна поиска беларусь'] => 'set_find_country/2'
+    ],
+    [
+        $json['inline-dating']['страна поиска россия'] => 'set_find_country/3'
+    ],
+    [
+        $json['inline-dating']['страна поиска молдова'] => 'set_find_country/4'
+    ],
+    [
+        $json['inline-dating']['страна поиска А вдруг это судьба'] => 'set_find_country/5'
+    ]
+]);
+
+$present_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['подарок утреннее кофе'] => 'set_present_dating/1'
+    ],
+    [
+        $json['inline-dating']['подарок пицца'] => 'set_present_dating/2'
+    ],
+    [
+        $json['inline-dating']['подарок салон красоты'] => 'set_present_dating/3'
+    ],
+    [
+        $json['inline-dating']['подарок на мечту'] => 'set_present_dating/4'
+    ]
+]);
+
+
+$skip_upload_photos_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['фото пропустить загрузку фото'] => 'skip_upload_photos'
+    ]
+]);
+
+$skip_upload_video_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['видео пропустить загрузку видео'] => 'skip_upload_video'
     ]
 ]);
