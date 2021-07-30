@@ -252,5 +252,26 @@ require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetPhotoThr
 require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetVideoDating.php');
 require_once (__DIR__ . '/App/Components/message/CreateProfileDating/SetMusicDating.php');
 
+require_once (__DIR__ . '/App/Components/message/ProfileDating/BackMenuBtnProfileDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/MyDatingProfile.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/DatingProfile.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/DeleteDatingProfile.php');
+
+//изменение фото видео
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditMediaProfileDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditMediaHendler/EditProfilePhotoVideoDataDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditMediaHendler/EditProfilePhotoVideoDating.php');
+
+//изменение данных анкеты
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditNameDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditCountyDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditCityDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditGoalCommunicationDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditChildrenDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditPresentDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditFindCountryDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditEmailDating.php');
+require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditContactAddressDating.php');
 
 require_once (__DIR__ . '/App/Components/message/BackBtnMenu.php');

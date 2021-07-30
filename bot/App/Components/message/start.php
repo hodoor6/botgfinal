@@ -60,6 +60,7 @@ if ($message == '/start' || ($message != '' && $new_user == true) ) {
         {
             $db->deleteUser($chatid);
         }
+		 $db->setCmd($chatid, '', 'dating_users');
         $db->setCmd($chatid, '');
         $db->setSearchBoy($chatid, 0);
         $db->setSearchGirl($chatid, 0);

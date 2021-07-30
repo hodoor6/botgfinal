@@ -1,12 +1,7 @@
-
-<b>Пол:</b> {gender}
-<b>Имя:</b> {name}
-<b>Возраст:</b> {age}
-<b>Страна:</b> {country}
-<b>Город:</b> {city}
+<b>{name}, {age}</b>
+<b>{country}, {city}</b>
 <b>Цель Общения:</b> {goal_communication}
 <b>Дети:</b> {children}
 <b>Какой  хочу подарок:</b> {present}
 <b>В какой стране хочу найти:</b> {find_country}
-<b>Почта:</b> {email}
 <b>Способ связи:</b> {contact_address}

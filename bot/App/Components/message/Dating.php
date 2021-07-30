@@ -14,7 +14,13 @@ if ($message == $json['buttons']['знакомства'] && empty($cmd[0])) {
         $msg->replyHTML($json['text-dating']['имя'],$keyb_cancel);
         $db->setCmd($chatid, 'set_name_dating','dating_users');
     }
-
+	
+    if ($cmddating[0] == 'edit_profile_dating' && $message == $json['buttons']['знакомства']) {
+        $db->setCmd($chatid, '', 'dating_users');
+        clearCache($mem, $chatid);
+        $cmddating[0] = '';
+    }
+	
     if($new_user_dating == false && empty($cmddating[0])) {
         $photo_dating_menu = DEFAULT_PHOTO_DATING_MENU;
 

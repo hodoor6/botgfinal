@@ -36,22 +36,21 @@ $btn_menu = $bt->keyButtons([
 
 
 $dating_menu_btn = $bt->keyButtons([
-     [
+    [
         $json['buttons']['анкета-dating'] => '',
-        $json['buttons']['фильтр-dating'] => ''
+        $json['buttons']['фильтр-dating'] => '',
+        $json['buttons']['почта'] => ''
     ],
     [
-        $json['buttons']['приколы'] => '',
-        $json['buttons']['встречи'] => ''
+        $json['buttons']['вопросы и ответы от вас'] => ''
     ],
     [
-        $json['buttons']['основнойбот'] => '',
-        $json['buttons']['форум'] => ''
+        $json['buttons']['встречи'] => '',
+        $json['buttons']['подарки'] => '',
+        $json['buttons']['чат'] => ''
     ],
     [
-        $json['buttons']['назад'] => '',
-        $json['buttons']['подарок'] => '',
-        $json['buttons']['чат'] => '',
+        $json['buttons']['анонимное общение'] => ''
     ]
 ]);
 
@@ -167,8 +166,35 @@ $skip_upload_photos_btn_dating = $bt->inlineButtons([
     ]
 ]);
 
+$skip_upload_photos_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['фото пропустить загрузку фото'] => 'skip_upload_photos'
+    ]
+]);
+
+
 $skip_upload_video_btn_dating = $bt->inlineButtons([
     [
         $json['inline-dating']['видео пропустить загрузку видео'] => 'skip_upload_video'
+    ]
+]);
+
+$profile_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['просмотреть анкету'] => '',
+        $json['buttons']['изменить анкету'] => ''
+    ],
+    [
+        $json['buttons']['удалить анкету'] => '',
+        $json['buttons']['изменить фото'] => ''
+    ],
+    [
+        $json['buttons']['знакомства'] => ''
+    ]
+]);
+
+$keyb_cancel_profile_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['анкета возврат меню'] => ''
     ]
 ]);
