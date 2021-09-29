@@ -1,6 +1,6 @@
 <?php
 
-if ($data[0] == 'set_goal_communication_dating' && $cmddating[0] == 'set_goal_communication_dating') {
+if ($data[0] == 'set_goal_communication_dating' && $cmddating[0] == 'set_goal_communication_dating_filter') {
     if ($data[1] == '1') {
         $goal = 'Общение';
     } elseif ($data[1] == '2') {
@@ -12,8 +12,8 @@ if ($data[0] == 'set_goal_communication_dating' && $cmddating[0] == 'set_goal_co
     } elseif ($data[1] == '5') {
         $goal = 'Всё';
     }
-    $db->setCmd($chatid, 'set_children_dating', 'dating_users');
-    $db->setGoalCommunication($chatid, $goal);
+    $db->setCmd($chatid, 'set_children_dating_filter', 'dating_users');
+    $db->setGoalCommunicationFilter($chatid, $goal,'dating_users');
     clearCache($mem, $chatid);
     $msg->replyHTML($json['text-dating']['дети'], $children_btn_dating);
     exit();

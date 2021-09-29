@@ -125,28 +125,14 @@ class DBManager
         return $result['age'];
     }
 
-    public function setAge($user_id, $age)
+    public function setAge($user_id, $age,$table = 'users')
     {
         $db = $this->db;
         $content = array('age' => $age);
-        $db->where('user_id', $user_id)->update('users', $content);
+        $db->where('user_id', $user_id)->update($table, $content);
     }
 
-    //установка возраста минимального для фильтра
 
-    public function setAgeMinFilter($user_id, $age)
-    {
-        $db = $this->db;
-        $content = array('min_age' => $age);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
-    //установка возраста максимального для фильтра
-    public function setAgeMaxFilter($user_id, $age)
-    {
-        $db = $this->db;
-        $content = array('max_age' => $age);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
 	
     public function getRefer($user_id)
     {
@@ -320,12 +306,6 @@ class DBManager
         $db->where('user_id', $user_id)->update('users', $content);
     }
 
-    public function setGenderFilter($user_id, $gender)
-    {
-        $db = $this->db;
-        $content = array('gender_filter' => $gender);
-        $db->where('user_id', $user_id)->update('users', $content);
-    }
 
     public function getRegDate($user_id)
     {
@@ -551,5 +531,288 @@ ORDER BY distance LIMIT 1";
         $db->where('user_id', $user_id)->update($table, $content);
     }
 
+
+/* 
+    public function getAllUsersDating($table = 'dating_users')
+    {
+        $db = $this->db;
+        $res = $db->get($table);
+        return $res;
+    } */
+
+
+//    public function getAllUsersDating($table = 'dating_users')
+//    {
+//        $db = $this->db;
+//        $res = $db->get($table);
+//        return $res;
+   // }
+   
+
+public function getAllUsersDating($gender_filter = 0,$min_age = 0, $max_age = 0, $goal = '', $children = '', $country = '',$table = 'dating_users')
+    {
+        $db = $this->db;
+           if ($min_age !== 0) {
+            $db->where('gender', $gender_filter, '=');
+        }
+
+        if ($min_age !== 0) {
+            $db->where('age', $min_age, '>=');
+        }
+        if ($max_age !== 0) {
+            $db->where('age', $max_age, '<=');
+        }
+        if ($goal !== ''&& $goal !=='Всё') {
+            $db->where('goal_communication', $goal, '=');
+        }
+
+        if ($goal == 'Всё') {
+            $$goal = 1;
+            $db->where('id', $goal, '>');
+        }
+	
+        if ($children !== ''&& $children !=='Не имеет значения') {
+            $db->where('children', $children, '=');
+        }
+        if ($children == 'Не имеет значения') {
+            $children = 1;
+            $db->where('id', $children, '>');
+        }
+        if ($country !== '' && $country !=='Все страны мира' ) {
+            $db->where('country', $country, '=');
+        }
+
+        if ( $country =='Все страны мира' ) {
+            $country = 1;
+            $db->where('id', $country, '>');
+        }
+
+        $res = $db->get($table);
+        //  $res =    $db->where('search_rnd', '0', '!=')->get('users');
+//        $db->where('gender_filter', 'gender', '=');
+//        $res = $db->orderBy('search_rnd', 'Asc')->get('users');
+    return $res;
+
+    }
+
+
+    public function getPaginationDating($user_id, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['pagination_dating'];
+    }
+
+    public function setPaginationDating($user_id, $pagination, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $content = array('pagination_dating' => $pagination);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+
+
+    public function getCommentsDating($user_id, $table = 'dating_comments')
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->get($table);
+        return $result;
+    }
+
+    public function setCommentsDating($user_id, $name, $age, $comment, $comm_user_id, $table = 'dating_comments')
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'name' => $name, 'age' => $age, 'comment' => $comment, 'user_id_companion' => $comm_user_id);
+        $db->insert($table, $content);
+    }
+
+    
+
+    public function getPresent($user_id, $table = 'dating_users')
+    {
+
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['present'];
+    }
+
+    public function getCmdDating($user_id, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['cmd'];
+    }
+
+
+    public function countCommentDating($user_id,$table = 'dating_comments',$table1='dating_users')
+    {
+        $db = $this->db;
+        $res = $db->where('user_id', $user_id)->getValue($table, 'count(*)');
+        $content = array('count_comment' => $res);
+        $db->where('user_id', $user_id)->update($table1, $content);
+    }
+    public function isLikeDating($user_id, $comm_user_id, $table = 'dating_like')
+    {
+        $db = $this->db;
+        $db->where('user_id', $user_id);
+        $result = $db->where('user_id_companion', $comm_user_id)->getOne($table);
+
+
+        if (isset($result['id'])) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function setLikeDating($user_id,  $comm_user_id, $table = 'dating_like')
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'user_id_companion' => $comm_user_id);
+        $db->insert($table, $content);
+    }
+
+
+    public function countLikeDating($user_id,$table = 'dating_like',$table1='dating_users')
+    {
+        $db = $this->db;
+        $res = $db->where('user_id', $user_id)->getValue($table, 'count(*)');
+        $content = array('count_like' => $res);
+        $db->where('user_id', $user_id)->update($table1, $content);
+    }
+	 
+   
+    // установка пола для
+
+     public function setGenderFilter($user_id, $gender, $table = 'users')
+    {
+        $db = $this->db;
+        $content = array('gender_filter' => $gender);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    //установка возраста минимального для фильтра
+
+    public function setAgeMinFilter($user_id, $age, $table = 'users')
+    {
+        $db = $this->db;
+        $content = array('min_age' => $age);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    //установка возраста максимального для фильтра
+
+    public function setAgeMaxFilter($user_id, $age, $table = 'users')
+    {
+        $db = $this->db;
+        $content = array('max_age' => $age);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+
+    public function setGoalCommunicationFilter($user_id, $goal, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $content = array('goal_communication_filter' => $goal);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function setChildrenFilter($user_id, $children, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $content = array('children_filter' => $children);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    // в какой стране хотят найти собеседника
+    public function setFindCountryFilter($user_id, $country, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $content = array('find_country_filter' => $country);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+
+    public function getAllUsersDatingFilter($min_age = 0, $max_age = 0, $goal = '', $children = '', $country = '')
+    {
+        $db = $this->db;
+        // $db->where('gender', $gender_filter, '=');
+        if ($min_age !== 0) {
+            $db->where('age', $min_age, '>=');
+        }
+        if ($max_age !== 0) {
+            $db->where('age', $max_age, '<=');
+        }
+        if ($goal !== '') {
+            $db->where('goal_communication', $goal, '=');
+        }
+        if ($children !== '') {
+            $db->where('children', $children, '=');
+        }
+        if ($country !== '') {
+            $db->where('find_country', $country, '=');
+        }
+
+        $res = $db->get('dating_users');
+        //  $res =    $db->where('search_rnd', '0', '!=')->get('users');
+//        $db->where('gender_filter', 'gender', '=');
+//        $res = $db->orderBy('search_rnd', 'Asc')->get('users');
+        return $res;
+    }
+
+    public function addUserMeeting($user_id, $gender, $username)
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'username' => $username, 'cmd' => '', 'age' => '', 'gender' => $gender,
+            'last_update' => 0, 'country' => '', 'city' => '', 'rating' => 0, 'reg_status' => 1);
+        $id = $db->insert('meeting_users', $content);
+        //return $id;
+    }
+
+
+
+    public function setCityFilter($user_id, $city, $table = 'meeting_users')
+    {
+        $db = $this->db;
+        $content = array('city_filter' => $city);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    public function getUserInfoMeeting($user_id)
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne('meeting_users');
+        return $result;
+    }
+
+
+    public function getAllUsersMeeting($min_age = 0, $max_age = 0,$city = '')
+    {
+        $db = $this->db;
+        // $db->where('gender', $gender_filter, '=');
+        if ($min_age !== 0) {
+            $db->where('age', $min_age, '>=');
+        }
+        if ($max_age !== 0) {
+            $db->where('age', $max_age, '<=');
+        }
+
+        if ($city !== '') {
+            $db->where('city', $city, '=');
+        }
+
+//        if ($goal !== '') {
+//            $db->where('goal_communication', $goal, '=');
+//        }
+        $db->where('reg_status', 0, '=');
+
+
+        $res = $db->get('meeting_users');
+        //  $res =    $db->where('search_rnd', '0', '!=')->get('users');
+//        $db->where('gender_filter', 'gender', '=');
+//        $res = $db->orderBy('search_rnd', 'Asc')->get('users');
+        return $res;
+    }
 
 }

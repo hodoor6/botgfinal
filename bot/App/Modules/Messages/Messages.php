@@ -98,5 +98,18 @@ class Messages
         $content = array('chat_id' => $chat_id, 'message_id' => $message_id);
         $tg->deleteMessage($content);
     }
+	
+	    public function editMessageКeyboard($keyboard)
+    {
+        $tg = $this->tg;
+        if (empty($chat_id)) {
+            $chat_id = $tg->ChatID();
+        }
+        if (empty($message_id)) {
+            $message_id = $tg->MessageID();
+        }
+        $content = array('chat_id' => $chat_id,'reply_markup' => $keyboard, 'message_id' => $message_id);
+        $tg->editMessageReplyMarkup($content)['result']['message_id'];
+    }
 
 }

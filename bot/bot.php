@@ -197,6 +197,8 @@ require (__DIR__ . '/GlobalVars.php');
 require_once (__DIR__ . '/App/Components/message/Dating.php');
 //подключаение компонентов
 //START SYS
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/BackMenuProfileDatingShow.php');
+
 require_once (__DIR__ . '/App/Components/data/set_number.php');
 
 require_once (__DIR__ . '/App/Components/data/set_gender.php');
@@ -275,3 +277,43 @@ require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating
 require_once (__DIR__ . '/App/Components/message/ProfileDating/EditProfileDating/EditContactAddressDating.php');
 
 require_once (__DIR__ . '/App/Components/message/BackBtnMenu.php');
+
+
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/SwitchProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/FullProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/CommentsProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/PresentProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/CommentWriteProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/CommentSendProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/LikeProfileDatingShow.php');
+require_once (__DIR__ . '/App/Components/message/ShowProfileDating/MessageProfileDatingShow.php');
+
+
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/DatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetGenderDatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetAgeMinDatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetAgeMaxDatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetGoalCommunicationDatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetChildrenDatingFilter.php');
+require_once(__DIR__ . '/App/Components/message/FilterProfileDating/SetFindCountryDatingFilter.php');
+
+
+require_once(__DIR__ . '/App/Components/message/Meeting/BackMenuBtnProfileMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/MeetingProfile.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting/SetNameMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting/SetAgeMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting/SetCityMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting/SetGoalCommunicationMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/CreateProfileMeeting/SetVideoMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/SearchProfileMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/MessageProfileMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/SwitchProfileMeeting.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/DeleteMeetingProfile.php');
+
+
+require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/MeetingFilter.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/SetAgeMinMeetingFilter.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/SetAgeMaxMeetingFilter.php');
+require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/SetCityMeetingFilter.php');
+

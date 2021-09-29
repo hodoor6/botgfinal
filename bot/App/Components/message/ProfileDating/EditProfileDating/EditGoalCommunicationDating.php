@@ -8,9 +8,9 @@ if ($data[0] == 'set_goal_communication_dating' && $cmddating[0] == 'edit_goal_c
     } elseif ($data[1] == '3') {
         $goal = 'Семья';
     } elseif ($data[1] == '4') {
-        $goal = 'Всё';
+       $goal = 'Нет в списке';
     } elseif ($data[1] == '5') {
-        $goal = 'Нет в списке';
+        $goal = 'Всё';
     }
     $db->setCmd($chatid, 'edit_children_dating', 'dating_users');
     $db->setGoalCommunication($chatid, $goal);

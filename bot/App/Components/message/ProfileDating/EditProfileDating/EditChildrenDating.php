@@ -12,7 +12,7 @@ if ($data[0] == 'set_children_dating' && $cmddating[0] == 'edit_children_dating'
     } elseif ($data[1] == '5') {
         $children = 'Есть, больше не хочу';
     } elseif ($data[1] == '6') {
-        $children = 'Другое';
+        $children = 'Не имеет значения';
     }
     $db->setCmd($chatid, 'edit_present_dating', 'dating_users');
     $db->setChildren($chatid, $children);

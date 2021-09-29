@@ -39,7 +39,6 @@ $dating_menu_btn = $bt->keyButtons([
     [
         $json['buttons']['анкета-dating'] => '',
         $json['buttons']['фильтр-dating'] => '',
-        $json['buttons']['почта'] => ''
     ],
     [
         $json['buttons']['вопросы и ответы от вас'] => ''
@@ -98,10 +97,10 @@ $goal_communication_btn_dating = $bt->inlineButtons([
         $json['inline-dating']['цель семья'] => 'set_goal_communication_dating/3'
     ],
     [
-        $json['inline-dating']['цель всё'] => 'set_goal_communication_dating/4'
+        $json['inline-dating']['цель нет в списке'] => 'set_goal_communication_dating/4'
     ],
     [
-        $json['inline-dating']['цель нет в списке'] => 'set_goal_communication_dating/5'
+		$json['inline-dating']['цель всё'] => 'set_goal_communication_dating/5'
     ]
 ]);
 
@@ -122,7 +121,7 @@ $children_btn_dating = $bt->inlineButtons([
         $json['inline-dating']['дети есть больше не хочу'] => 'set_children_dating/5'
     ],
     [
-        $json['inline-dating']['дети другое'] => 'set_children_dating/6'
+        $json['inline-dating']['дети не имеет значения'] => 'set_children_dating/6'
     ]
 ]);
 
@@ -140,7 +139,7 @@ $find_country_btn_dating = $bt->inlineButtons([
         $json['inline-dating']['страна поиска молдова'] => 'set_find_country/4'
     ],
     [
-        $json['inline-dating']['страна поиска А вдруг это судьба'] => 'set_find_country/5'
+        $json['inline-dating']['страна поиска все страны мира'] => 'set_find_country/5'
     ]
 ]);
 
@@ -196,5 +195,44 @@ $profile_btn_dating = $bt->keyButtons([
 $keyb_cancel_profile_btn_dating = $bt->keyButtons([
     [
         $json['buttons']['анкета возврат меню'] => ''
+    ]
+]);
+$keyb_cancel_back_main_menu_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['возрат в меню знакомства'] => 'back-main-menu-dating',
+    ],
+
+]);
+$keyb_comment_main_menu_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-dating']['комментарий написать комментарий'] => 'comment-main-menu-dating/',
+    ],
+    [
+        $json['inline-dating']['возрат в меню знакомства'] => 'back-main-menu-dating'
+    ]
+]);
+
+
+$back_main_menu_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['меню знакомства возрат в меню знакомства'] => ''
+    ]
+]);
+
+
+$meeting_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['поиск-meeting'] => '',
+        $json['buttons']['фильтр-meeting'] => ''
+    ],
+    [
+        $json['buttons']['знакомства'] => '',
+        $json['buttons']['создать-meeting'] => ''
+    ]
+]);
+
+$keyb_cancel_meeting_btn_meeting = $bt->keyButtons([
+    [
+        $json['buttons']['meeting возврат меню встречи'] => ''
     ]
 ]);
