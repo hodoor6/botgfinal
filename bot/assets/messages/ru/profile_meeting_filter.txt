@@ -1,0 +1,2 @@
+<b>{name}, {age} {city}</b>
+<b>Цель Общения:</b> {goal_communication}
