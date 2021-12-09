@@ -317,3 +317,26 @@ require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/Set
 require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/SetAgeMaxMeetingFilter.php');
 require_once(__DIR__ . '/App/Components/message/Meeting/FilterProfileMeeting/SetCityMeetingFilter.php');
 
+
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/BackMenuBtnCreateAskQuestionQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/MenuQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/MyQuestionQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/DeleteMyQuestionQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/QuestionForGirl/QuestionForGirlQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/QuestionForBoy/QuestionForBoyQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/LikeQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/DislikeQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/BackMenuQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/CommentsQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/CommentWriteQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/CommentSendQuestionAnswerDating.php');
+
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/MessageQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/SwitchQuestionAnswerDating.php');
+
+
+
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/AskQuestion/CreateAskQuestionQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/AskQuestion/SetGenderQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/AskQuestion/SetVideoQuestionAnswerDating.php');
+require_once(__DIR__ . '/App/Components/message/QuestionAnswerDating/AskQuestion/SetAskQuestionQuestionAnswerDating.php');

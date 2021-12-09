@@ -236,3 +236,42 @@ $keyb_cancel_meeting_btn_meeting = $bt->keyButtons([
         $json['buttons']['meeting возврат меню встречи'] => ''
     ]
 ]);
+
+$question_answer_dating_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['question-answer-dating вопросы для девушек'] => '',
+    ],
+    [
+        $json['buttons']['question-answer-dating вопросы для парней'] => ''
+    ],
+    [
+        $json['buttons']['question-answer-dating задать вопрос'] => '',
+    ],
+    [
+        $json['buttons']['question-answer-dating мои вопросы'] => '',
+    ],
+    [
+        $json['buttons']['знакомства'] => '',
+    ]
+]);
+
+$gender_question_answer_dating_btn_dating = $bt->inlineButtons([
+    [
+        $json['inline-question-answer-dating']['парням'] => 'set_gender_question_answer/boy'
+    ],
+    [
+        $json['inline-question-answer-dating']['девушкам'] => 'set_gender_question_answer/girl'
+    ]
+]);
+
+$back_main_menu_question_answer_dating_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['question-answer-dating возрат в меню вопроса'] => ''
+    ]
+]);
+
+$keyb_cancel_create_ask_question_question_answer_dating_btn_dating = $bt->keyButtons([
+    [
+        $json['buttons']['question-answer-dating возврат меню вопросы'] => ''
+    ]
+]);
