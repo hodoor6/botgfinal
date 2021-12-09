@@ -587,6 +587,8 @@ public function getAllUsersDating($gender_filter = 0,$min_age = 0, $max_age = 0,
             $db->where('id', $country, '>');
         }
 
+     $db->where('reg_status', 0, '=');
+   
         $res = $db->get($table);
         //  $res =    $db->where('search_rnd', '0', '!=')->get('users');
 //        $db->where('gender_filter', 'gender', '=');
@@ -815,4 +817,242 @@ public function getAllUsersDating($gender_filter = 0,$min_age = 0, $max_age = 0,
         return $res;
     }
 
+//информация существует ли вопрос
+
+    public function getUserInfoQuestion($user_id)
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->getOne('question_answer_users');
+        return $result;
+    }
+
+//добавить вопрос
+
+    public function addUserQuestion($user_id, $username)
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'username' => $username, 'cmd' => '', 'age' => '', 'gender' => 0,
+            'last_update' => 0, 'country' => '', 'city' => '', 'rating' => 0, 'reg_status' => 1);
+        $id = $db->insert('question_answer_users', $content);
+        //return $id;
+    }
+
+    // показвть все вопросы
+
+    public function getUsersInfoQuestion($user_id)
+    {
+        $db = $this->db;
+        $result = $db->where('user_id', $user_id)->get('question_answer_users');
+        return $result;
+    }
+
+//распределение в какую группу пойдет вопрос девушкам или парням
+
+    public function setGenderQuestion($user_id, $gender, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $content = array('gender' => $gender);
+        $db->where('reg_status', 1);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+//загрузить видео
+
+    public function setVideoQuestion($user_id, $video, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $content = array('video_profile' => $video);
+        $db->where('reg_status', 1);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+// загрузить фото
+
+    public function setPhotoQuestion($user_id, $photo, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $content = array('photo_profile' => $photo);
+        $db->where('reg_status', 1);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    //записать вопрос
+
+    public function setQuestionQuestion($user_id, $question, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $content = array('question' => $question);
+        $db->where('user_id', $user_id);
+        $db->where('reg_status', 1)->update($table, $content);
+    }
+
+    //установить статус вопроса при регестрации
+
+    public function setRegStatusQuestion($user_id, $status, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $content = array('reg_status' => $status);
+        $db->where('user_id', $user_id);
+        $db->where('reg_status', 1)->update($table, $content);
+    }
+
+
+    public function getPaginationQuestion($user_id, $id, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id', $id);
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result['pagination_dating'];
+    }
+
+//
+
+    public function setPaginationQuestion($user_id, $id, $pagination, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id', $id);
+        $content = array('pagination_dating' => $pagination);
+        $db->where('user_id', $user_id)->update($table, $content);
+    }
+
+    //удалить один вопрос
+    public function deleteQuestionQuestion($id, $user_id, $table = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id', $id);
+        $db->where('user_id', $user_id)->delete($table, 1);
+    }
+
+    public function setGenderFilterQuestion($user_id, $gender, $table = 'dating_users')
+    {
+        $db = $this->db;
+        $content = array('gender_question' => $gender);
+        $db->where('user_id', $user_id)->update($table, $content);
+        $result = $db->where('user_id', $user_id)->getOne($table);
+        return $result;
+    }
+
+    public function getAllUsersQuestion($gender)
+    {
+        $db = $this->db;
+
+        $db->where('gender', $gender, '=');
+        $db->where('reg_status', 0, '=');
+
+        $res = $db->get('question_answer_users');
+
+        return $res;
+    }
+
+    public function isLikeQuestion($user_id, $comm_user_id, $id_question, $table = 'question_answer_like')
+    {
+        $db = $this->db;
+        $db->where('user_id', $user_id);
+        $db->where('id_question', $id_question);
+        $result = $db->where('user_id_companion', $comm_user_id)->getOne($table);
+
+
+        if (isset($result['id'])) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function setLikeQuestion($user_id, $comm_user_id, $id_question, $table = 'question_answer_like')
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'user_id_companion' => $comm_user_id, 'id_question' => $id_question);
+        $db->insert($table, $content);
+    }
+
+
+    public function countLikeQuestion($user_id, $id_question, $table = 'question_answer_like', $table1 = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id_question', $id_question);
+        $res = $db->where('user_id', $user_id)->getValue($table, 'count(*)');
+        $content = array('count_like' => $res);
+        $db->where('id', $id_question);
+        $db->where('user_id', $user_id)->update($table1, $content);
+    }
+
+
+    public function isDislikeQuestion($user_id, $comm_user_id, $id_question, $table = 'question_answer_dislike')
+    {
+        $db = $this->db;
+        $db->where('user_id', $user_id);
+        $db->where('id_question', $id_question);
+        $result = $db->where('user_id_companion', $comm_user_id)->getOne($table);
+
+
+        if (isset($result['id'])) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public function setDislikeQuestion($user_id, $comm_user_id, $id_question, $table = 'question_answer_dislike')
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'user_id_companion' => $comm_user_id, 'id_question' => $id_question);
+        $db->insert($table, $content);
+    }
+
+
+    public function countDislikeQuestion($user_id, $id_question, $table = 'question_answer_dislike', $table1 = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id_question', $id_question);
+        $res = $db->where('user_id', $user_id)->getValue($table, 'count(*)');
+        $content = array('count_dislike' => $res);
+        $db->where('id', $id_question);
+        $db->where('user_id', $user_id)->update($table1, $content);
+    }
+
+//
+    public function getCommentsQuestion($user_id, $id_question, $table = 'question_answer_comments')
+    {
+        $db = $this->db;
+        $db->where('id_question', $id_question);
+        $result = $db->where('user_id', $user_id)->get($table);
+        return $result;
+    }
+
+    public function setCommentsQuestion($user_id, $comment, $comm_user_id, $id_question, $table = 'question_answer_comments')
+    {
+        $db = $this->db;
+        $content = array('user_id' => $user_id, 'comment' => $comment, 'user_id_companion' => $comm_user_id, 'id_question' => $id_question);
+        $db->insert($table, $content);
+    }
+
+
+    public function isCommentQuestion($user_id, $comm_user_id, $table = 'question_answer_comments')
+    {
+        $db = $this->db;
+        $db->where('user_id', $user_id);
+        $result = $db->where('user_id_companion', $comm_user_id)->getOne($table);
+
+
+        if (isset($result['id'])) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+//
+    public function countCommentQuestion($user_id, $id_question, $table = 'question_answer_comments', $table1 = 'question_answer_users')
+    {
+        $db = $this->db;
+        $db->where('id_question', $id_question);
+        $res = $db->where('user_id', $user_id)->getValue($table, 'count(*)');
+        $content = array('count_comment' => $res);
+        $db->where('id', $id_question);
+        $db->where('user_id', $user_id)->update($table1, $content);
+    }
 }
